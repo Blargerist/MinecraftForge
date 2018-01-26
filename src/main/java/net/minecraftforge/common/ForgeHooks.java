@@ -1344,7 +1344,7 @@ public class ForgeHooks
                     }
                     catch (JsonParseException jsonparseexception)
                     {
-                        FMLLog.log.error("Parsing error loading built-in advancement " + key, (Throwable)jsonparseexception);
+                        FMLLog.log.error("Parsing error loading built-in advancement " + key + " : " + jsonparseexception.getLocalizedMessage());
                         return false;
                     }
                     catch (IOException ioexception)

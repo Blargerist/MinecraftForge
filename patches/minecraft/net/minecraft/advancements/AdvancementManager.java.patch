@@ -8,3 +8,21 @@
          field_192784_c.func_192083_a(map);
  
          for (Advancement advancement : field_192784_c.func_192088_b())
+@@ -117,7 +118,7 @@
+                     }
+                     catch (IllegalArgumentException | JsonParseException jsonparseexception)
+                     {
+-                        field_192782_a.error("Parsing error loading custom advancement " + resourcelocation, (Throwable)jsonparseexception);
++                        field_192782_a.error("Parsing error loading custom advancement " + resourcelocation + " : " + jsonparseexception.getLocalizedMessage());
+                         this.field_193768_e = true;
+                     }
+                     catch (IOException ioexception)
+@@ -185,7 +186,7 @@
+                             }
+                             catch (JsonParseException jsonparseexception)
+                             {
+-                                field_192782_a.error("Parsing error loading built-in advancement " + resourcelocation, (Throwable)jsonparseexception);
++                                field_192782_a.error("Parsing error loading built-in advancement " + resourcelocation + " : " + jsonparseexception.getLocalizedMessage());
+                                 this.field_193768_e = true;
+                             }
+                             catch (IOException ioexception)
